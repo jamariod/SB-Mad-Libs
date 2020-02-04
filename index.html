@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM Starter Kit</title>
+  </head>
+  <body>
+    <p>
+      <span id="name">________</span> welcome to Super Bowl Mad libs. On this
+      game you can pick your team, number of years your team participated in the
+      Super Bowl, game location, MVP Destination, team parade location and your
+      head coach!
+    </p>
+    <p>
+      Over the past twenty years the <span id="team">________</span> have
+      dominated the NFL landscape by participating in
+      <span id="years">________</span> Super Bowls and winning six. Every new
+      season teams try to emulate them by getting players to take less money
+      while building a talented roster to have a chance at winning the Super
+      Bowl. This years the Super Bowl is located in
+      <span id="gameLocation">________</span>. During each Super Bowl the sports
+      reporters pick a MVP of the game. This lucky person is awarded a trip to
+      <span id="mvpDestination">________</span>. After enjoying their trip the
+      MVP than travel home to participate in a parade locationed in
+      <span id="paradeLocation">________</span>.
+    </p>
+
+    <form>
+      <label
+        >Your Name:
+        <input type="text" id="nameInput" value="" />
+      </label>
+      <label
+        >Team:
+        <input type="text" id="teamInput" value="" />
+      </label>
+      <label
+        >Years:
+        <input type="text" id="yearsInput" value="" />
+      </label>
+      <label
+        >Game Location:
+        <input type="text" id="gameLocationInput" value="" />
+      </label>
+      <label
+        >MVP Destination:
+        <input type="text" id="mvpDestinationInput" value="" />
+      </label>
+      <label
+        >Parade Location:
+        <input type="text" id="paradeLocationInput" value="" />
+      </label>
+      <button type="button" id="clickMe1">Your Name</button>
+      <button type="button" id="clickMe2">Team</button>
+      <button type="button" id="clickMe3">Number Of Years</button>
+      <button type="button" id="clickMe4">Game Location</button>
+      <button type="button" id="clickMe5">MVP Destination</button>
+      <button type="button" id="clickMe6">Parade Location</button>
+    </form>
+  </body>
+  <script>
+    const nameButton = document.getElementById("clickMe1");
+    const name = document.getElementById("name");
+    const nameInput = document.getElementById("nameInput");
+
+    const teamButton = document.getElementById("clickMe2");
+    const team = document.getElementById("team");
+    const teamInput = document.getElementById("teamInput");
+
+    const yearsButton = document.getElementById("clickMe3");
+    const years = document.getElementById("years");
+    const yearsInput = document.getElementById("yearsInput");
+
+    const gameLocationButton = document.getElementById("clickMe4");
+    const gameLocation = document.getElementById("gameLocation");
+    const gameLocationInput = document.getElementById("gameLocationInput");
+
+    const mvpDestinationButton = document.getElementById("clickMe5");
+    const mvpDestination = document.getElementById("mvpDestination");
+    const mvpDestinationInput = document.getElementById("mvpDestinationInput");
+
+    const paradeLocationButton = document.getElementById("clickMe6");
+    const paradeLocation = document.getElementById("paradeLocation");
+    const paradeLocationInput = document.getElementById("paradeLocationInput");
+
+    nameButton.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      name.innerHTML = nameInput.value;
+    });
+
+    teamButton.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      team.innerHTML = teamInput.value;
+    });
+
+    yearsButton.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      years.innerHTML = yearsInput.value;
+    });
+
+    gameLocationButton.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      gameLocation.innerHTML = gameLocationInput.value;
+    });
+
+    mvpDestinationButton.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      mvpDestination.innerHTML = mvpDestinationInput.value;
+    });
+
+    paradeLocationButton.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      paradeLocation.innerHTML = paradeLocationInput.value;
+    });
+  </script>
+</html>
